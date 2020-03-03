@@ -39,7 +39,6 @@ Validator.prototype.add = function (dom, rules) {
       let name = arr.shift();
       let params = [value, ...arr, item.errMsg];
 
-      // apply保证上下文一致
       return this.strategies[name].apply(dom, params);
     });
   });
